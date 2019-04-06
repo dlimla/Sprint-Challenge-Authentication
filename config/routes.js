@@ -1,8 +1,8 @@
 const axios = require('axios');
 const bcrypt = require('bcryptjs');
+const Users = require('./routes-model.js');
 
 const { authenticate, generateToken, jwtSecret } = require('../auth/authenticate');
-const Users = require('./routes-model.js');
 
 
 module.exports = server => {
@@ -41,8 +41,7 @@ function login(req, res) {
         const token = generateToken(user);
         res.status(200).json({
           message: `Welcome ${user.username}!, have a token...`,
-          token,
-          roles: token.roles,
+          token
         });
       } else {
         res.status(401).json({ message: 'Invalid Credentials' });
@@ -55,7 +54,7 @@ function login(req, res) {
 
 function getJokes(req, res) {
   const requestOptions = {
-    headers: { accept: 'application/json' },
+    headers: { accept: 'application/json' }
   };
 
   axios
