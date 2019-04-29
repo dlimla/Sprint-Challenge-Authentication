@@ -29,42 +29,49 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
+        sessions are a way for the browser to keep track of who is using their app.  Since HTTP is stateless and as a default doesn't save anything as "history" this allows the browser to saved an ID as a cookie and that cookie will be sent along with everything the user is doing and help keep track of past actions.
+
 1. What does bcrypt do to help us store passwords in a secure manner.
+    bcrypt is an open source functionality that auto generates a LONG random password that is saved along with the users password.  This helps secure our database from hackers who would use a brute force hacking or even a tabel-based hacking to auto generate easy made passwords.
+
 1. What does bcrypt do to slow down attackers?
+    The main way to slow down the hacking process to a crawl is length of the password.  Randomly generated numbers and letters are good as well but it is overall length that keeps hackers at bay.  So Bcrypt creates not only randomly generated letters, numbers, and symbols but long ones as well.
+
 1. What are the three parts of the JSON Web Token?
+    header which contains meta-data, payload which contains the actual user data, and signature which contains our secret.  
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] `cd` into the root of the project and run `yarn` to install dependencies.
-- [ ] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [x] `cd` into the root of the project and run `yarn` to install dependencies.
+- [x] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Add your Project Manager as a Reviewer on the Pull-request
+- [x] PM then will count the HW as done by  merging the branch back into master.
 
 Helpful Tip on Testing this Project:
 
-- [ ] **TEST** this project using **`POSTMAN`**.
+- [x] **TEST** this project using **`POSTMAN`**.
 
 ## Minimum Viable Product
 
-- [ ] Implement the `register` function inside `/config/routes.js`.
-- [ ] Implement the `login` function inside `/config/routes.js`.
-- [ ] Use JSON Web Tokens for authentication.
+- [x] Implement the `register` function inside `/config/routes.js`.
+- [x] Implement the `login` function inside `/config/routes.js`.
+- [x] Use JSON Web Tokens for authentication.
 
 **Note** The migrations and a database with empty users is already included
 
-- [ ] Add the authentication related code. If everything is done correctly, visiting `/api/jokes` should return a list of jokes.
+- [x] Add the authentication related code. If everything is done correctly, visiting `/api/jokes` should return a list of jokes.
 
 ## Stretch Problem: Build a front end to interface with your User Auth System
 
